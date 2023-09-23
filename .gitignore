@@ -31,3 +31,7 @@ ellion_api-*.tar
 
 # Ignore env files
 /.env
+
+# Ignore dialyzer plt files
+/priv/plts/*.plt
+/priv/plts/*.plt.hash

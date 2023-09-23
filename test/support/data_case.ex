@@ -14,6 +14,8 @@ defmodule EllionApi.DataCase do
   this option is not recommended for other databases.
   """
 
+  # credo:disable-for-this-file
+
   use ExUnit.CaseTemplate
 
   alias Ecto.Adapters.SQL

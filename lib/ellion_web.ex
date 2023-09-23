@@ -17,6 +17,8 @@ defmodule EllionWeb do
   those modules here.
   """
 
+  # credo:disable-for-this-file
+
   def static_paths, do: ~w(assets fonts images favicon.ico robots.txt)
 
   def router do
