@@ -22,6 +22,9 @@ config :ellion_api, EllionWeb.Endpoint,
   pubsub_server: EllionApi.PubSub,
   live_view: [signing_salt: "3aeN8J+d"]
 
+# Configures the tzdata
+config :elixir, :time_zone_database, Tzdata.TimeZoneDatabase
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",

@@ -51,7 +51,10 @@ defmodule EllionApi.MixProject do
       {:jason, "~> 1.4"},
       {:plug_cowboy, "~> 2.6"},
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
-      {:excoveralls, "~> 0.17", only: [:dev, :test]}
+      {:excoveralls, "~> 0.17", only: [:dev, :test]},
+      {:tzdata, "~> 1.1"},
+      {:argon2_elixir, "~> 3.2"},
+      {:faker, "~> 0.17", only: [:dev, :test]}
     ]
   end
 
