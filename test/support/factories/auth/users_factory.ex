@@ -7,6 +7,9 @@ defmodule EllionApi.Factories.Auth.UsersFactory do
   # credo:disable-for-this-file Credo.Check.Readability.ModuleDoc
   # credo:disable-for-this-file Credo.Check.Readability.Specs
 
+  alias EllionApi.Auth.Users.User
+  alias EllionApi.Repo
+
   @doc """
   Generate a fake user attrs
   """
@@ -23,5 +26,11 @@ defmodule EllionApi.Factories.Auth.UsersFactory do
       inserted_at: Faker.DateTime.backward(366),
       updated_at: DateTime.utc_now()
     }
+  end
+
+  def insert_user do
+    %User{}
+    |> User.changeset_attrs(user_attrs())
+    |> Repo.insert!()
   end
 end
