@@ -28,6 +28,12 @@ defmodule EllionApi.Factories.Auth.UsersFactory do
     }
   end
 
+  def build_user do
+    %User{}
+    |> User.changeset_attrs(user_attrs())
+    |> Ecto.Changeset.apply_action!(nil)
+  end
+
   def insert_user do
     %User{}
     |> User.changeset_attrs(user_attrs())
